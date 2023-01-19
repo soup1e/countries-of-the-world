@@ -1,8 +1,9 @@
 import React from 'react';
 import { useCountries } from '../../hooks/useCountries.js';
+import Countries from '../Countries/Countries';
 
 export default function Main() {
-  const { type, setType } = useCountries();
+  const { filterCountries, type, setType } = useCountries();
 
   return (
     <div className="countries">
@@ -24,6 +25,9 @@ export default function Main() {
           <option value="South America">South America</option>
         </select>
       </div>
+      {filterCountries().map((name) => (
+        <Countries key={name.id} {...name} />
+      ))}
     </div>
   );
 }

@@ -17,5 +17,10 @@ export function useCountries() {
     fetchData();
   }, []);
 
-  return { type, setType, error };
+  const filterCountries = () => {
+    if (type === 'all') return countries;
+    return countries.filter((country) => country.continent === type);
+  };
+
+  return { filterCountries, type, setType, error };
 }
