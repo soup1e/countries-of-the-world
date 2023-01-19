@@ -5,6 +5,7 @@ export function useCountries() {
   const [countries, setCountries] = useState([]);
   const [type, setType] = useState('all');
   const [error, setError] = useState('');
+
   useEffect(() => {
     const fetchData = async () => {
       try {

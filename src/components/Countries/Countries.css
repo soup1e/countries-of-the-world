@@ -1,0 +1,15 @@
+.countryContainer {
+  display: flex;
+  height: 100px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 20px;
+  background-color: #2c74b3;
+  color: whitesmoke;
+}
